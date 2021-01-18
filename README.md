@@ -1,14 +1,14 @@
 ## Floppman
 
 `floppman` or `flp` is the package manager for the Source Floppa distribution.\
-It uses the `flopbuild` package format (heavily inspired by CRUX's Pkgfiles)\
+It uses the `flopbuild` package format (heavily inspired by CRUX's Pkgfiles)
 
 ### Usage (not finished yet)
 
-`floppman` will be used like this:\
+`floppman` will be used like this:
 ```
-install   - find and install a package from the local source tree \
-sync      - sync the local source tree with the nearest/fastest mirror \
+install   - find and install a package from the local source tree 
+sync      - sync the local source tree with the nearest/fastest mirror 
 update    - update a package / preform a system update
 uninstall - remove a package
 list	  - list all installed packages
@@ -19,7 +19,7 @@ config    - opens a ncurses TUI that helps you configure floppman
 ### Building
 
 `floppman` is built using a pre-configured Makefile \
-It is installable by doing:\
+It is installable by doing:
 ```
 $ make
 $ sudo make install
