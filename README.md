@@ -13,7 +13,7 @@ update    - update a package / preform a system update
 uninstall - remove a package
 list	  - list all installed packages
 find	  - find a package in the local source tree (reports name, path and description)
-config    - opens a ncurses TUI that helps you configure floppman
+config    - opens a TUI interface that helps you configure floppman
 ```
 
 ### Building
@@ -21,10 +21,9 @@ config    - opens a ncurses TUI that helps you configure floppman
 `floppman` is built using a pre-configured Makefile \
 It is installable by doing:
 ```
-$ make
 $ sudo make install
 ```
-Or, if you don't have `sudo` installed, just do everything as `root`.
+Or, if you don't have `sudo` installed, just do it as `root`.
 
 ### Bugs
 
