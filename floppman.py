@@ -1,6 +1,12 @@
+"""
+Known stuff to fix/issues for Floppman:
+    - try/except to fix bad python messages
+"""
+
+
 # Source Floppa package manager
 # written in python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import os
