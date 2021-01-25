@@ -27,6 +27,7 @@ Or, if you don't have `sudo` installed, just do it as `root`.
 
 ### Bugs
 
-If you notice any bugs, you can either report them in the Github issues menu, or contact me on `matrix`\
-My matrix: `@zenithium_:matrix.org`\
+If you notice any bugs, you can either report them in the Github issues menu, or contact us on `matrix`\
+Zenithium matrix: `@zenithium_:matrix.org`\
+avcado's matrix: `@avc1d0:matrix.org`\
 Source Floppa will eventually have an IRC channel and this `README` will be updated 
