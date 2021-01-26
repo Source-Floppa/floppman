@@ -1,0 +1,53 @@
+#!/usr/bin/python3
+# Source Floppa package manager
+# written in python
+
+import sys
+import os
+import time
+import shutil
+
+def usage():
+    print("""FLOPPMAN - The package manager for Source Floppa GNU/Linux
+    flop   - find and install a package
+    find   - find a package by name-match
+    sync   - sync the local repository with the online mirror
+    update - update a package / preform a system update
+    unflop - uninstall a package
+    list   - list all installed packages
+    config - open a TUI menu for easier configuring
+            """)
+
+def makePkgInstallDir():
+    try:
+        print(f"Making /tmp/cache/{sys.argv[2]}")
+        try:
+            os.mkdir(f"/tmp/cache")
+            print("/tmp/cache did not exist and was created")
+        except FileExistsError:
+            print("/tmp/cache exists, nothing to be done")
+    
+        try:
+            os.mkdir(f"/tmp/cache/{sys.argv[2]}")
+            print(f"/tmp/cache/{sys.argv[2]} did not exist and was created")
+        except FileExistsError:
+            print(f"/tmp/cache/{sys.argv[2]} already exists, it is going to be recreated")
+            shutil.rmdir(f"/tmp/cache/{sys.argv[2]}")
+            os.mkdir(f"/tmp/cache/{sys.argv[2]}")
+    
+        print(f"Going into /tmp/cache/{sys.argv[2]}")
+        os.chdir(f"/tmp/cache/{sys.argv[2]}")
+    except IndexError:
+        usage()
+
+# def syncFromMirror()
+# def findFlopBuild(use) # the `use` variable whether its used by the program (single path) vs the user (multiple packages, no paths)
+# def parseFlopBuild(path) # the `path` variable will be used to get to the building dir and build the package there
+# def uninstallPkg(pkg) # the `pkg` variable will be used to determine which package to uninstall
+# def listInstallPkg()
+
+try:
+    if sys.argv[1] == "--help" or sys.argv[1] == "-h":
+        usage()
+except IndexError:
+    usage()
