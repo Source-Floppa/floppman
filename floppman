@@ -45,3 +45,9 @@ def makePkgInstallDir():
 # def parseFlopBuild(path) # the `path` variable will be used to get to the building dir and build the package there
 # def uninstallPkg(pkg) # the `pkg` variable will be used to determine which package to uninstall
 # def listInstallPkg()
+
+try:
+    if sys.argv[1] == "--help" or sys.argv[1] == "-h":
+        usage()
+except IndexError:
+    usage()
