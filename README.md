@@ -7,13 +7,13 @@ It uses the `flopbuild` package format (heavily inspired by CRUX's Pkgfiles)
 
 `floppman` will be used like this:
 ```
-install   - find and install a package from the local source tree 
-sync      - sync the local source tree with the nearest/fastest mirror 
-update    - update a package / preform a system update
-uninstall - remove a package
-list	  - list all installed packages
-find	  - find a package in the local source tree (reports name, path and description)
-config    - opens a TUI interface that helps you configure floppman
+flop   - find and install a package from the local source tree 
+sync   - sync the local source tree with the nearest/fastest mirror 
+update - update a package / preform a system update
+unflop - remove a package
+list   - list all installed packages
+find   - find a package in the local source tree (reports name, path and description)
+config - opens a TUI interface that helps you configure floppman
 ```
 
 ### Building
@@ -21,7 +21,7 @@ config    - opens a TUI interface that helps you configure floppman
 `floppman` is built using a pre-configured Makefile \
 It is installable by doing:
 ```
-$ sudo make install
+$ sudo make
 ```
 Or, if you don't have `sudo` installed, just do it as `root`.
 
