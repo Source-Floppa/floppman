@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Source Floppa package manager
-# written in python
+# Written in python
+# By: Avcado and Zenithium
 
 import sys
 import os
@@ -40,11 +41,30 @@ def makePkgInstallDir():
     except IndexError:
         usage()
 
+def listInstallPkg(use):
+    try:
+        world = open("/etc/floppman/world", "r")
+    except FileNotFoundError:
+        os.system("touch /etc/floppman/world")
+        world = open("/etc/floppman/world", "r")
+    if use == "u":
+        for i in world:
+            pkg = i.split(" ", 1)
+            pkg.pop(1)
+            print(pkg[0])
+    elif use == "p":
+        for i in world:
+            allpkg = []
+            pkg = i.split(" ", 1)
+            pkg.pop(1)
+            allpkg.append(pkg[0])
+
+# def findFastestMirror()
 # def syncFromMirror()
+# def reorderPkgOrder()
 # def findFlopBuild(use) # the `use` variable whether its used by the program (single path) vs the user (multiple packages, no paths)
 # def parseFlopBuild(path) # the `path` variable will be used to get to the building dir and build the package there
 # def uninstallPkg(pkg) # the `pkg` variable will be used to determine which package to uninstall
-# def listInstallPkg()
 
 try:
     if sys.argv[1] == "--help" or sys.argv[1] == "-h":
